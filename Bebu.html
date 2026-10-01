@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Bebu ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff5f7;
+    color: #51343d;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    font-size: 20px;
+    animation: float 7s linear forwards;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+
+    background:
+    radial-gradient(circle at top left, #ffdce6, transparent 35%),
+    linear-gradient(135deg, #fff4f7, #ffe3eb);
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.small {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9b6875;
+}
+
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 58px;
+    line-height: 1.05;
+    margin: 18px 0;
+    color: #673b48;
+}
+
+.hero p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #755861;
+}
+
+button {
+    border: none;
+    background: #9b5b6b;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(155,91,107,0.2);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+/* COMMON SECTIONS */
+
+section {
+    padding: 75px 22px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    color: #673b48;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #8b6c74;
+    margin-bottom: 35px;
+}
+
+/* STORY */
+
+.story {
+    background: #fff;
+}
+
+.timeline {
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+.memory {
+    background: #fff5f7;
+    padding: 23px;
+    margin: 17px 0;
+    border-radius: 20px;
+    border-left: 4px solid #c78393;
+    box-shadow: 0 5px 18px rgba(100,50,70,0.05);
+}
+
+.memory .date {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #b27684;
+}
+
+.memory h3 {
+    margin: 7px 0;
+    font-size: 17px;
+}
+
+.memory p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #80666d;
+}
+
+/* PHOTO SECTION */
+
+.photo-section {
+    background: #fff5f7;
+}
+
+.photo-main {
+    width: 100%;
+    max-width: 470px;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(100,50,70,0.15);
+    filter: grayscale(100%);
+}
+
+.photo-grid {
+    max-width: 470px;
+    margin: 18px auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.photo-small {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(100,50,70,0.12);
+    filter: grayscale(100%);
+}
+
+.photo-caption {
+    max-width: 470px;
+    margin: 22px auto 0;
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    color: #704451;
+}
+
+/* LOVE MESSAGE */
+
+.love-letter {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px 25px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(100,50,70,0.08);
+}
+
+.love-letter p {
+    font-size: 14px;
+    line-height: 2;
+    color: #705962;
+}
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    gap: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 25px 20px;
+    border-radius: 22px;
+    box-shadow: 0 8px 25px rgba(100,50,70,0.08);
+}
+
+.card span {
+    font-size: 28px;
+}
+
+.card h3 {
+    margin: 10px 0 7px;
+    font-size: 17px;
+}
+
+.card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #80666d;
+}
+
+/* OPEN WHEN */
+
+.open-box {
+    max-width: 500px;
+    margin: auto;
+}
+
+.open-box button {
+    margin: 7px;
+}
+
+.message {
+    display: none;
+    margin-top: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    line-height: 1.8;
+    font-size: 14px;
+    box-shadow: 0 8px 25px rgba(100,50,70,0.08);
+}
+
+/* FINAL */
+
+.final {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+    radial-gradient(circle at bottom right, #ffdce6, transparent 40%),
+    linear-gradient(135deg, #ffe5ec, #fff5f7);
+}
+
+.final-box {
+    max-width: 500px;
+}
+
+.final-box p {
+    font-size: 14px;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+.signature {
+    margin-top: 30px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 25px;
+    color: #9b5b6b;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    font-size: 11px;
+    color: #a88790;
+}
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .photo-main {
+        height: 380px;
+    }
+
+    .photo-small {
+        height: 220px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- ================= HERO ================= -->
+
+<div class="hero">
+
+    <div class="hero-content">
+
+        <div class="small">
+            A little surprise for you ♡
+        </div>
+
+        <h1>
+            To My<br>
+            Bebu ♡
+        </h1>
+
+        <p>
+            From being classmates and friends
+            to becoming something so special...
+            this little website is just for you. 🥹
+        </p>
+
+        <button onclick="goToStory()">
+            Open it ♡
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= OUR STORY ================= -->
+
+<section class="story" id="story">
+
+    <div class="section-title">
+        Our Little Story ♡
+    </div>
+
+    <div class="subtitle">
+        And somehow, it all started in college...
+    </div>
+
+    <div class="timeline">
+
+        <div class="memory">
+
+            <div class="date">
+                The Beginning
+            </div>
+
+            <h3>
+                Same Class. Same Friends. ♡
+            </h3>
+
+            <p>
+                We met in college because we were
+                in the same class and the same
+                friend group.
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="date">
+                Then...
+            </div>
+
+            <h3>
+                We Became Friends 🫶🏻
+            </h3>
+
+            <p>
+                We started talking when we became
+                friends, and slowly you became
+                someone really special to me.
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="date">
+                26 January ♡
+            </div>
+
+            <h3>
+                Our Special Day
+            </h3>
+
+            <p>
+                26 January became such a special
+                date in our story. And now here we
+                are, 8 months of us. 💗
+            </p>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="date">
+                One Of My Favourite Memories
+            </div>
+
+            <h3>
+                A Memory I'll Always Remember ♡
+            </h3>
+
+            <p>
+                Our first special memory —
+                our first kiss in the car.
+                A little moment that became
+                a beautiful part of our story. 🤍
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OUR PHOTOS ================= -->
+
+<section class="photo-section">
+
+    <div class="section-title">
+        Little Pieces Of Us ♡
+    </div>
+
+    <div class="subtitle">
+        Three pictures, a million feelings.
+    </div>
+
+
+    <!-- PHOTO 1 -->
+
+    <img
+        src="photos/photo1.jpg"
+        class="photo-main"
+        alt="A special memory">
+
+
+    <div class="photo-caption">
+        “My favourite person to hold onto.” ♡
+    </div>
+
+
+    <!-- PHOTO 2 + PHOTO 3 -->
+
+    <div class="photo-grid">
+
+        <img
+            src="photos/photo2.jpg"
+            class="photo-small"
+            alt="Our memory">
+
+        <img
+            src="photos/photo3.jpg"
+            class="photo-small"
+            alt="Our memory">
+
+    </div>
+
+
+    <div class="photo-caption">
+        Just us. Just the little moments. 🫶🏻
+    </div>
+
+</section>
+
+
+<!-- ================= THE WAY YOU LOVE ME ================= -->
+
+<section class="story">
+
+    <div class="section-title">
+        The Way You Love Me ♡
+    </div>
+
+    <div class="subtitle">
+        One of the things I love most about you...
+    </div>
+
+
+    <div class="love-letter">
+
+        <p>
+
+            Bebu,
+
+            <br><br>
+
+            One of the things I love most about you
+            is the way you treat me and take care
+            of me.
+
+            <br><br>
+
+            It's not always about big things.
+            It's the little things, the way you
+            notice me, care about me and make me
+            feel special.
+
+            <br><br>
+
+            You make me feel so loved and cared for,
+            and I'm genuinely so grateful to have
+            you in my life.
+
+            <br><br>
+
+            You really are the best boyfriend
+            I could ask for.
+
+            <br><br>
+
+            I love you so much, Bebu. 🥹💗
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= 8 MONTHS ================= -->
+
+<section>
+
+    <div class="section-title">
+        8 Months Of Us ♡
+    </div>
+
+    <div class="subtitle">
+        8 months, countless memories,
+        and so many little moments.
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <span>♡</span>
+
+            <h3>
+                8 Months
+            </h3>
+
+            <p>
+                8 months of knowing you,
+                understanding you,
+                laughing with you,
+                and making memories.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>🫶🏻</span>
+
+            <h3>
+                From Friends...
+            </h3>
+
+            <p>
+                We started as friends in the same
+                class and friend group,
+                and our story slowly became
+                something much more special.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>🥹</span>
+
+            <h3>
+                To My Bebu
+            </h3>
+
+            <p>
+                Somewhere along the way,
+                the person who was once my friend
+                became my favourite person.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>💗</span>
+
+            <h3>
+                And Today...
+            </h3>
+
+            <p>
+                I'm just really happy that
+                you're a part of my life.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= THINGS I LOVE ================= -->
+
+<section class="story">
+
+    <div class="section-title">
+        Things I Love About You ♡
+    </div>
+
+    <div class="subtitle">
+        A few of the million reasons...
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <span>♡</span>
+
+            <h3>
+                The Way You Care
+            </h3>
+
+            <p>
+                I love the way you take care of me
+                and notice the little things.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>🫶🏻</span>
+
+            <h3>
+                The Way You Treat Me
+            </h3>
+
+            <p>
+                You make me feel special,
+                cared for and loved.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>🥹</span>
+
+            <h3>
+                Our Memories
+            </h3>
+
+            <p>
+                Every little memory we've made
+                has its own special place in my heart.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <span>💗</span>
+
+            <h3>
+                Simply You
+            </h3>
+
+            <p>
+                You're my Bebu, and that's already
+                one of my favourite things.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OPEN WHEN ================= -->
+
+<section>
+
+    <div class="section-title">
+        Open When... 💌
+    </div>
+
+    <div class="subtitle">
+        Little messages from me to you.
+    </div>
+
+
+    <div class="open-box">
+
+        <button onclick="openMessage('miss')">
+            You Miss Me ♡
+        </button>
+
+        <button onclick="openMessage('bad')">
+            You Had A Bad Day
+        </button>
+
+        <button onclick="openMessage('smile')">
+            You Need A Smile 🥹
+        </button>
+
+
+        <div id="miss" class="message">
+
+            If you're missing me,
+            remember all the little memories
+            we've made together. ♡
+
+            <br><br>
+
+            Your Shonaa is always cheering for you. 🫶🏻
+
+        </div>
+
+
+        <div id="bad" class="message">
+
+            Whatever happened today,
+            take a little breath.
+
+            <br><br>
+
+            Be kind to yourself, Bebu.
+            Tomorrow is another day. 🤍
+
+        </div>
+
+
+        <div id="smile" class="message">
+
+            Okay Bebu...
+
+            <br><br>
+
+            This is your official reminder
+            to smile right now. 🥹💗
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL MESSAGE ================= -->
+
+<section class="final">
+
+    <div class="final-box">
+
+        <div class="small">
+            One last thing...
+        </div>
+
+
+        <div class="section-title">
+            Happy Boyfriend's Day ♡
+        </div>
+
+
+        <p>
+
+            My Bebu,
+
+            <br><br>
+
+            It's crazy to think that we started
+            as two people in the same class,
+            in the same friend group...
+
+            <br><br>
+
+            and now you're such a special part
+            of my life.
+
+            <br><br>
+
+            From our friendship to these
+            8 months of memories,
+            I'm grateful for every little
+            moment we've shared.
+
+            <br><br>
+
+            I love the way you treat me,
+            the way you take care of me,
+            and all the little things you do.
+
+            <br><br>
+
+            You really are my favourite person
+            and the best Bebu. 🥹💗
+
+            <br><br>
+
+            Happy Boyfriend's Day,
+            my Bebu. ♡
+
+            <br><br>
+
+            I love you so much.
+
+        </p>
+
+
+        <div class="signature">
+
+            With all my love ♡<br>
+            Your Shonaa
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made specially for my Bebu ♡
+
+</footer>
+
+
+<script>
+
+/* Scroll */
+
+function goToStory() {
+
+    document.getElementById("story").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+/* Open messages */
+
+function openMessage(id) {
+
+    let messages = document.querySelectorAll(".message");
+
+    messages.forEach(function(message) {
+        message.style.display = "none";
+    });
+
+    document.getElementById(id).style.display = "block";
+
+}
+
+
+/* Floating hearts */
+
+function createHeart() {
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = [
+        "♡",
+        "♥",
+        "💕",
+        "💗",
+        "💖"
+    ];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random() * hearts.length)];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.animationDuration =
+        (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function() {
+        heart.remove();
+    }, 10000);
+
+}
+
+setInterval(createHeart, 900);
+
+</script>
+
+</body>
+</html>
